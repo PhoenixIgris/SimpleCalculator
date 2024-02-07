@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.agecalculator.AgeCalculatorFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Today's Date"
+                    android:textColor="@color/text_second_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/today_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/light_green_highlight"
+                    android:textSize="@dimen/text_size"
+                    tools:text="Friday" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/today_day_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/today_day"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/gray_100"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="16dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/today_day_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:clickable="true"
+                                android:hint="dd"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:selectAllOnFocus="true"
+                                android:textSize="18sp"
+                                tools:text="12" />
+
+                            <View
+                                android:layout_width="5dp"
+                                android:layout_height="2dp"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@color/text_color"
+                                android:text="-"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/today_month_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="mm"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:selectAllOnFocus="true"
+                                android:textSize="18sp"
+                                tools:text="01" />
+
+                            <View
+                                android:layout_width="5dp"
+                                android:layout_height="2dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="10dp"
+                                android:background="@color/text_color"
+                                android:text="-"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/today_year_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:hint="yyyy"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:selectAllOnFocus="true"
+                                android:textSize="18sp"
+                                tools:text="2024" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/today_day_date_picker"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_calender" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/date_of_birth_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Date of Birth"
+                    android:textColor="@color/text_second_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/date_of_birth_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/light_green_highlight"
+                    android:textSize="@dimen/text_size"
+                    tools:text="Friday" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/date_of_birth_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_of_birth_day"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/history_background_color"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="16dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/birth_day_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="dd-"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:selectAllOnFocus="true"
+                                android:textSize="18sp"
+                                tools:text="12" />
+
+                            <View
+                                android:layout_width="5dp"
+                                android:layout_height="2dp"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@color/text_color"
+                                android:text="-"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/birth_month_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:hint="mm"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:selectAllOnFocus="true"
+                                android:textSize="18sp"
+                                tools:text="01" />
+
+                            <View
+                                android:layout_width="5dp"
+                                android:layout_height="2dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="10dp"
+                                android:background="@color/text_color"
+                                android:text="-"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/birth_year_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="yyyy"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:selectAllOnFocus="true"
+                                android:textSize="18sp"
+                                tools:text="2024" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/date_of_birth_date_picker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_calender" />
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnClear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/button_color"
+                    android:fontFamily="@font/nunito_bold"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="15dp"
+                    android:text="Clear"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:theme="@style/Theme.SimpleCalculator.ButtonStyle"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/btnCalculate"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/date_of_birth_lyt"
+                    app:strokeColor="@color/light_green_highlight"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCalculate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light_green_highlight"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="15dp"
+                    android:text="Calculate"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:theme="@style/Theme.SimpleCalculator.ButtonStyle"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnClear"
+                    app:layout_constraintTop_toBottomOf="@+id/date_of_birth_lyt" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sharebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="Share"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableEndCompat="@drawable/baseline_share_24"
+                app:tint="@color/black" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="16dp"
+                android:background="@color/button_color"
+                app:layout_constraintBottom_toTopOf="@+id/your_age_title" />
+
+            <TextView
+                android:id="@+id/your_age_title"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="Your Age"
+                android:textColor="@color/text_second_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/gray_100"
+                app:strokeWidth="2dp">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:columnCount="3"
+                    android:rowCount="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:gravity="center"
+                        android:text="Years"
+                        android:textAllCaps="true"
+                        android:textColor="@color/light_green_highlight"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:gravity="center"
+                        android:text="Months"
+                        android:textAllCaps="true"
+                        android:textColor="@color/light_green_highlight"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:gravity="center"
+                        android:text="Days"
+                        android:textAllCaps="true"
+                        android:textColor="@color/light_green_highlight"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/age_years"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        tools:text="31" />
+
+                    <TextView
+                        android:id="@+id/age_mths"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        tools:text="02" />
+
+                    <TextView
+                        android:id="@+id/age_days"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        tools:text="28" />
+                </GridLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/your_next_birthday_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Next Birthday"
+                android:textColor="@color/text_second_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/gray_100"
+                app:strokeWidth="2dp">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:columnCount="2"
+                    android:rowCount="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:gravity="center"
+                        android:text="Months"
+                        android:textAllCaps="true"
+                        android:textColor="@color/light_green_highlight"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:gravity="center"
+                        android:text="Days"
+                        android:textAllCaps="true"
+                        android:textColor="@color/light_green_highlight"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/age_next_mths"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        tools:text="31" />
+
+                    <TextView
+                        android:id="@+id/age_next_days"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        tools:text="28" />
+                </GridLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/extra_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Extra"
+                android:textColor="@color/text_second_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/gray_100"
+                app:cardCornerRadius="8dp"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:id="@+id/extra_info_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-5471092371977143/5659460090"></com.google.android.gms.ads.AdView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

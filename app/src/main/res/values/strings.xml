@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SimpleCalculator</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Simple Calculator</string>
+    <string name="nav_header_subtitle">sachitashresthawork1234@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_bmi_calculator">Bmi Calculator</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="primary_menu_age_calculator">Age Calculator</string>
+
+</resources>

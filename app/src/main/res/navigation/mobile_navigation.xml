@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_age">
+
+    <fragment
+        android:id="@+id/nav_age"
+        android:name="com.igris.simplecalculator.ui.agecalculator.AgeCalculatorFragment"
+        android:label="@string/primary_menu_age_calculator"
+        tools:layout="@layout/fragment_age_calculator" />
+
+    <fragment
+        android:id="@+id/nav_bmi"
+        android:name="com.igris.simplecalculator.ui.bmi.BmiCalculatorFragment"
+        android:label="@string/menu_bmi_calculator"
+        tools:layout="@layout/fragment_bmi" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.igris.simplecalculator.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>

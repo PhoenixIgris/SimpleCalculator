@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_age"
+            android:icon="@drawable/ic_male"
+            android:title="@string/primary_menu_age_calculator" />
+        <item
+            android:id="@+id/nav_bmi"
+            android:icon="@drawable/ic_bmi"
+            android:title="@string/menu_bmi_calculator" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/user_icon"
+            android:title="@string/menu_slideshow" />
+    </group>
+</menu>
